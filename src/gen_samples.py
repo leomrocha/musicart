@@ -72,6 +72,7 @@ def resample(song, nsamples=1024, abs=False, max_val=2 * np.pi):
     return res, x
 
 
+# FIXME something about this function makes it take TOOOO long time to plot anything so it's useless
 def img_add_subplot(fig, x, y, colormap, title=None, plottype="bar",
                     pos=111, alpha=0.75, width=0.015,
                     projection="rectilinear", polar_origin=-50):
@@ -290,8 +291,7 @@ def create_sample_tile(wavfile, outpath, colornames, title=None, nsamples=500, f
 #     print("got args: ", arg1, arg2, arg3, arg4)
 
 
-selectedcnames = ['plasma']
-[
+selectedcnames = [
     'viridis', 'plasma', 'inferno', 'magma', 'cividis',
     'Greys', 'Purples', 'Blues', 'Greens', 'Oranges', 'Reds',
     'YlOrBr', 'YlOrRd', 'OrRd', 'PuRd', 'RdPu', 'BuPu',
